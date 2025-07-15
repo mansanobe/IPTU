@@ -1,0 +1,35 @@
+plugins {
+    id 'application'
+}
+
+group = 'org.unirio.bsi.tvvt'
+version = '1.0.0'
+
+application {
+    mainClass = 'main.Main'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
+    implementation 'org.xerial:sqlite-jdbc:3.50.1.0'
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.13.0'
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.13.0'
+    // https://mvnrepository.com/artifact/org.junit.platform/junit-platform-suite-engine
+    testImplementation 'org.junit.platform:junit-platform-suite-engine:1.13.0'
+    // https://mvnrepository.com/artifact/org.mockito/mockito-core
+    testImplementation 'org.mockito:mockito-core:5.18.0'
+    // https://mvnrepository.com/artifact/org.mockito/mockito-inline
+    testImplementation 'org.mockito:mockito-inline:5.2.0'
+    // https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.18.0'
+}
+
+test {
+    useJUnitPlatform()
+}
