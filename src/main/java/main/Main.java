@@ -30,16 +30,21 @@ public class Main {
 		//System.out.println(i1);
 		
 		// Cria dois imóveis que não estão no BD
-		Imovel i3 = ImovelFactory.create(78901234, LocalDate.now(), 250000, 45, 'D');
-		Imovel i4 = ImovelFactory.create(89012345, LocalDate.of(1800, 1, 1), 700000, 77, 'E');
+		//Imovel i3 = ImovelFactory.create(78901234, LocalDate.now(), 250000, 45, 'D');
+		//Imovel i4 = ImovelFactory.create(89012345, LocalDate.of(1800, 1, 1), 700000, 77, 'E');
 		
-		System.out.println(i3);
-		System.out.println(i4);
+		//System.out.println(i3);
+		//System.out.println(i4);
 		
 		// Insere os imóveis novos no BD
 		// Se tentar inserir duas vezes vai dar erro, porque inscrição é chave única
 		//i3.save();
 		//i4.save();
+
+		// Cria imoveis sem o imovelFactory
+
+		Imovel i5 = new Imovel(9999999, LocalDate.now(), 500000, 100, 'A');
+
 		
 		//System.out.println(i3);
 		//System.out.println(i4);
@@ -51,14 +56,14 @@ public class Main {
 		//System.out.println(i4);
 		
 		// Calcula IPTU de i4
-		IPTU iptu = new IPTU(i4);
+		//IPTU iptu = new IPTU(i4);
 		
-		ValorIPTU valorIPTU = iptu.calculaValor(10, 0.7f);
+		//ValorIPTU valorIPTU = iptu.calculaValor(10, 0.7f);
 		
-		System.out.println(valorIPTU.valor);
-		System.out.println(valorIPTU.valorAVista);
-		System.out.println(valorIPTU.parcelamento.getNumParcelas());
-		System.out.println(valorIPTU.parcelamento.getValorParcela());
+		//System.out.println(valorIPTU.valor);
+		//System.out.println(valorIPTU.valorAVista);
+		//System.out.println(valorIPTU.parcelamento.getNumParcelas());
+		//System.out.println(valorIPTU.parcelamento.getValorParcela());
 	}
 
 }

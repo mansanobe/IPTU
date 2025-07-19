@@ -28,6 +28,7 @@ dependencies {
     testImplementation 'org.mockito:mockito-inline:5.2.0'
     // https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
     testImplementation 'org.mockito:mockito-junit-jupiter:5.18.0'
+    testImplementation 'com.h2database:h2:2.2.224'
 }
 
 test {
