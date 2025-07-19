@@ -15,7 +15,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.mockStatic;
 
-public class Fase1Testes {
+public class Fase1Test {
 
     @Test
     public void testCriarImovelComInscricaoInferior() {

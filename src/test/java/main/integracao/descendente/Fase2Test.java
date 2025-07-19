@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.mockStatic;
 
-public class Fase2Testes {
+public class Fase2Test {
 
     @Test
     public void testCriarImovelComInscricaoInferior() {
