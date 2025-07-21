@@ -20,8 +20,7 @@ class ImovelDAOTest {
     @Test
     void testGetByIDCatch() {
         try (MockedStatic<DBConnection> dbMock = Mockito.mockStatic(DBConnection.class)) {
-            when(DBConnection.get()).thenThrow(new RuntimeException("DB error"));
-//            dbMock.when(DBConnection::get).thenThrow(new RuntimeException("DB error"));
+            dbMock.when(DBConnection::get).thenThrow(new RuntimeException("DB error"));
 
             Assertions.assertThrows(IllegalArgumentException.class, () -> ImovelDAO.getByID(12345678));
         }

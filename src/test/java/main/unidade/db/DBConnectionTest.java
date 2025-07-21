@@ -155,7 +155,7 @@ class DBConnectionTest {
             dmMock.when(() -> DriverManager.getConnection(Mockito.anyString(), Mockito.anyString(), Mockito.anyString()))
                     .thenThrow(new RuntimeException("Erro de conexão"));
             Connection conn = DBConnection.get();
-            Assertions.assertNull(conn); // Espera retorno null
+            Assertions.assertNull(conn);
         }
     }
 }
